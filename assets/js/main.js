@@ -11,13 +11,6 @@ var spy = new Gumshoe('#nav  a');
         $('body').toggleClass('darkmode');
     })
 
-    // modal
-    $('.btn-view').on('click', function (event) {
-        $('.modal-container').addClass('active');
-    })
-    $('.close-modal').on('click', function(event){
-        $('.modal-container').removeClass('active');
-    })
 
 // Sticky navbar
 $(document).ready(function(){
