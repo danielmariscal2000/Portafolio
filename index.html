@@ -282,7 +282,7 @@
                             <h3>Cafeteria para Celiacos</h3>
                             <div class="project-view d-flex">
                                 <span>FullStack</span>
-                                <a href="javascript:void(0)" class="btn-view">View </a>
+                                <a class="btn-view" onclick="openModal(0)">View </a>
                             </div>
                         </div>
                     </div>
@@ -296,7 +296,7 @@
                             <h3>SPA Pokemon</h3>
                             <div class="project-view d-flex">
                                 <span>FullStack</span>
-                                <a href="javascript:void(1)" class="btn-view">View </a>
+                                <a class="btn-view" onclick="openModal(1)">View </a>
                             </div>
                         </div>
                     </div>
@@ -309,7 +309,7 @@
                             <h3>Lista de Tareas</h3>
                             <div class="project-view d-flex">
                                 <span>Front-end</span>
-                                <a href="javascript:void(2)" class="btn-view">View </a>
+                                <a class="btn-view" onclick="openModal(2)">View </a>
                             </div>
                         </div>
                     </div>
@@ -322,7 +322,7 @@
                             <h3>Web development</h3>
                             <div class="project-view d-flex">
                                 <span>Front-end developemnt</span>
-                                <a href="javascript:void(0)" class="btn-view">View </a>
+                                <a class="btn-view">View </a>
                             </div>
                         </div>
                     </div>
@@ -421,7 +421,7 @@
         </div>
     </footer>
     <!-- Project view modal Celiaco -->
-    <div class="modal-container">
+    <div class="modal-container" id="modalContainer0">
         <div class="modal">
             <div class="modal-image">
                 <img src="assets/images/celiacos.PNG" alt="image">
@@ -444,13 +444,13 @@
                 </ul>
 
                 <div class="close-btn">
-                    <a href="javascript:void(0)" class="btn btn-blue close-modal">Close Modal</a>
+                    <a class="btn btn-blue close-modal" onclick="closeModal(0)">Close Modal</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Project view modal Pokemon -->
-    <div class="modal-container">
+    <div class="modal-container" id="modalContainer1">
         <div class="modal">
             <div class="modal-image">
                 <img src="assets/images/pokemon.jpg" alt="image">
@@ -470,13 +470,13 @@
                 </ul>
 
                 <div class="close-btn">
-                    <a href="javascript:void(1)" class="btn btn-blue close-modal">Close Modal</a>
+                    <a class="btn btn-blue close-modal" onclick="closeModal(1)">Close Modal</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Project view modal Lista Tareas -->
-    <div class="modal-container">
+    <div class="modal-container" id="modalContainer2">
         <div class="modal">
             <div class="modal-image">
                 <img src="assets/images/listaTareas.PNG" alt="image">
@@ -496,15 +496,12 @@
                 </ul>
 
                 <div class="close-btn">
-                    <a href="javascript:void(1)" class="btn btn-blue close-modal">Close Modal</a>
+                    <a class="btn btn-blue close-modal" onclick="closeModal(2)">Close Modal</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Scroll up -->
-    <a href="javascript:void(0)" class="scrollup">
-        <img src="assets/images/uparrow.svg" alt="arrow up">
-    </a>
 </body>
 <script src="assets/js/jquery.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
@@ -517,5 +514,15 @@
         $("#basic-form").validate();
     });
 </script>
+<script>
+    function openModal(n) {
+        document.getElementById(`modalContainer${n}`).style.display = 'block';
+    }
+
+    function closeModal(n) {
+        document.getElementById(`modalContainer${n}`).style.display = 'none';
+    }
+</script>
+
 
 </html>
