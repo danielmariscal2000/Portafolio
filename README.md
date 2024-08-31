@@ -1,6 +1,6 @@
-# 💼 Responsive Mini Portfolio
+# 💼 Responsive Portfolio
 
-### 💼 Responsive Mini Portfolio
+### 💼 Responsive Portfolio
 
 - Responsive mini portfolio website Using HTML CSS & JavaScript
 - Contains animations css.
