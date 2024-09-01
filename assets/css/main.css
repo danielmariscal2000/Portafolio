@@ -165,6 +165,7 @@ nav {
 }
 .img_about{
   width: 500px;
+  border-radius: 10px;
 }
 .navigation-bar ul li {
   display: inline-block;
@@ -609,6 +610,14 @@ header.fixed nav {
   height: 330px;
   object-fit: cover;
 }
+
+.project-item .project-image iframe {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
 
 .project-item .project-content {
   padding: 25px 25px;
